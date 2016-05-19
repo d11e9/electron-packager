@@ -182,7 +182,7 @@ module.exports = {
 
     var operations = [
       function (cb) {
-        fs.move(templatePath, tempPath, {clobber: true}, cb)
+        fs.copy(templatePath, tempPath, {clobber: true}, cb)
       },
       function (cb) {
         fs.copy(opts.dir, appPath, {filter: userIgnoreFilter(opts), dereference: true}, cb)
